@@ -4,18 +4,18 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 
 export const metadata: Metadata = {
-  title: 'Kurniawan MC & Event Organizer',
-  description: 'Professional MC and Event Organizer services for weddings, corporate, and special events.',
+  title: 'Fitra Kurniawan | MC & Event Organizer',
+  description: 'Personal branding resmi Fitra Kurniawan: Master of Ceremony & Event Organizer untuk pernikahan, korporat, dan acara spesial.',
   openGraph: {
-    title: 'Kurniawan MC & Event Organizer',
-    description: 'Professional MC and Event Organizer services for weddings, corporate, and special events.',
+    title: 'Fitra Kurniawan | MC & Event Organizer',
+    description: 'MC profesional & EO: eksekusi acara tepat waktu, hangat, dan berkelas.',
     type: 'website',
     url: 'https://kurniawan-mc-vercel.app',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Kurniawan MC & Event Organizer',
-    description: 'Professional MC and Event Organizer services.',
+    title: 'Fitra Kurniawan | MC & Event Organizer',
+    description: 'MC profesional & EO untuk pernikahan dan acara korporat.',
   }
 };
 

@@ -4,9 +4,9 @@ import { z } from 'zod';
 import { zodResolver } from '@hookform/resolvers/zod';
 
 const Schema = z.object({
-  eventType: z.string().min(2),
-  date: z.string().min(8),
-  venue: z.string().min(3),
+  eventType: z.string().min(2, 'Jenis acara wajib diisi'),
+  date: z.string().min(8, 'Tanggal wajib diisi'),
+  venue: z.string().min(3, 'Lokasi/venue wajib diisi'),
   budget: z.string().optional(),
   notes: z.string().optional()
 });
@@ -20,7 +20,7 @@ export default function BookingForm() {
 
   const onSubmit = async (data: FormData) => {
     await new Promise(r => setTimeout(r, 800));
-    alert('Booking received! We will contact you to confirm details.');
+    alert('Pemesanan diterima! Kami akan menghubungi Anda untuk konfirmasi.');
     try { localStorage.setItem('booking:last', JSON.stringify(data)); } catch {}
     reset();
   };
@@ -28,33 +28,33 @@ export default function BookingForm() {
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
       <div>
-        <label className="text-sm text-white/80">Event Type</label>
-        <input {...register('eventType')} className="input mt-1" placeholder="e.g. Wedding Reception" />
+        <label className="text-sm text-white/80">Jenis Acara</label>
+        <input {...register('eventType')} className="input mt-1" placeholder="Contoh: Resepsi Pernikahan" />
         {errors.eventType && <p className="text-red-400 text-sm mt-1">{errors.eventType.message}</p>}
       </div>
       <div className="grid md:grid-cols-2 gap-4">
         <div>
-          <label className="text-sm text-white/80">Date</label>
+          <label className="text-sm text-white/80">Tanggal</label>
           <input type="date" {...register('date')} className="input mt-1" />
           {errors.date && <p className="text-red-400 text-sm mt-1">{errors.date.message}</p>}
         </div>
         <div>
-          <label className="text-sm text-white/80">Venue</label>
-          <input {...register('venue')} className="input mt-1" placeholder="Venue name / address" />
+          <label className="text-sm text-white/80">Lokasi / Venue</label>
+          <input {...register('venue')} className="input mt-1" placeholder="Nama/Alamat venue" />
           {errors.venue && <p className="text-red-400 text-sm mt-1">{errors.venue.message}</p>}
         </div>
       </div>
       <div className="grid md:grid-cols-2 gap-4">
         <div>
-          <label className="text-sm text-white/80">Budget (optional)</label>
-          <input {...register('budget')} className="input mt-1" placeholder="$" />
+          <label className="text-sm text-white/80">Anggaran (opsional)</label>
+          <input {...register('budget')} className="input mt-1" placeholder="Rp" />
         </div>
         <div>
-          <label className="text-sm text-white/80">Notes (optional)</label>
-          <input {...register('notes')} className="input mt-1" placeholder="Additional info" />
+          <label className="text-sm text-white/80">Catatan (opsional)</label>
+          <input {...register('notes')} className="input mt-1" placeholder="Info tambahan" />
         </div>
       </div>
-      <button disabled={isSubmitting} className="btn-primary w-full">{isSubmitting ? 'Submitting...' : 'Submit Booking'}</button>
+      <button disabled={isSubmitting} className="btn-primary w-full">{isSubmitting ? 'Mengirim...' : 'Kirim Pemesanan'}</button>
     </form>
   );
 }

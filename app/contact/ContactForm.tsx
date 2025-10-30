@@ -4,10 +4,10 @@ import { z } from 'zod';
 import { zodResolver } from '@hookform/resolvers/zod';
 
 const Schema = z.object({
-  name: z.string().min(2, 'Please enter your name'),
-  email: z.string().email('Enter a valid email'),
-  phone: z.string().min(8, 'Enter a valid phone/WhatsApp'),
-  message: z.string().min(10, 'Please provide details')
+  name: z.string().min(2, 'Mohon isi nama Anda'),
+  email: z.string().email('Email tidak valid'),
+  phone: z.string().min(8, 'Nomor WA/telepon tidak valid'),
+  message: z.string().min(10, 'Mohon ceritakan kebutuhan Anda')
 });
 
 type FormData = z.infer<typeof Schema>;
@@ -19,7 +19,7 @@ export default function ContactForm() {
 
   const onSubmit = async (data: FormData) => {
     await new Promise(r => setTimeout(r, 700));
-    alert('Thanks! We will contact you via WhatsApp/email.');
+    alert('Terima kasih! Kami akan menghubungi Anda via WhatsApp/email.');
     try { localStorage.setItem('contact:last', JSON.stringify(data)); } catch {}
     reset();
   };
@@ -27,28 +27,28 @@ export default function ContactForm() {
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
       <div>
-        <label className="text-sm text-white/80">Name</label>
-        <input {...register('name')} className="input mt-1" placeholder="Your name" />
+        <label className="text-sm text-white/80">Nama</label>
+        <input {...register('name')} className="input mt-1" placeholder="Nama lengkap" />
         {errors.name && <p className="text-red-400 text-sm mt-1">{errors.name.message}</p>}
       </div>
       <div className="grid md:grid-cols-2 gap-4">
         <div>
           <label className="text-sm text-white/80">Email</label>
-          <input {...register('email')} className="input mt-1" placeholder="Email" />
+          <input {...register('email')} className="input mt-1" placeholder="Alamat email" />
           {errors.email && <p className="text-red-400 text-sm mt-1">{errors.email.message}</p>}
         </div>
         <div>
-          <label className="text-sm text-white/80">WhatsApp / Phone</label>
-          <input {...register('phone')} className="input mt-1" placeholder="e.g. +62..." />
+          <label className="text-sm text-white/80">WhatsApp / Telepon</label>
+          <input {...register('phone')} className="input mt-1" placeholder="Contoh: +62..." />
           {errors.phone && <p className="text-red-400 text-sm mt-1">{errors.phone.message}</p>}
         </div>
       </div>
       <div>
-        <label className="text-sm text-white/80">Message</label>
-        <textarea {...register('message')} className="textarea mt-1" placeholder="How can we help?" />
+        <label className="text-sm text-white/80">Pesan</label>
+        <textarea {...register('message')} className="textarea mt-1" placeholder="Ceritakan kebutuhan acara Anda" />
         {errors.message && <p className="text-red-400 text-sm mt-1">{errors.message.message}</p>}
       </div>
-      <button disabled={isSubmitting} className="btn-primary w-full">{isSubmitting ? 'Sending...' : 'Send'}</button>
+      <button disabled={isSubmitting} className="btn-primary w-full">{isSubmitting ? 'Mengirim...' : 'Kirim'}</button>
     </form>
   );
 }
