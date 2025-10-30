@@ -74,7 +74,7 @@ export default function HomePage() {
         <div className="grid gap-6 md:grid-cols-3 items-center">
           <div className="md:col-span-1 card overflow-hidden">
             <img
-              src="https://images.unsplash.com/photo-1527980965255-d3b416303d12?q=80&w=1200&auto=format&fit=crop"
+              src="https://i.ibb.co.com/0VmqBPXn/fitra.jpg?auto=format&fit=crop"
               alt="Fitra Kurniawan"
               className="w-full h-72 object-cover"
             />
