@@ -27,7 +27,7 @@ export default function HomePage() {
           </div>
           <div className="card p-4">
             <img
-              src="https://images.unsplash.com/photo-1531058020387-3be344556be6?q=80&w=1200&auto=format&fit=crop"
+              src="https://generasicakrawala.com/fitra.jpg"
               alt="Suasana acara elegan"
               className="rounded-lg object-cover w-full h-[320px]"
             />
@@ -74,7 +74,7 @@ export default function HomePage() {
         <div className="grid gap-6 md:grid-cols-3 items-center">
           <div className="md:col-span-1 card overflow-hidden">
             <img
-              src="https://i.ibb.co.com/0VmqBPXn/fitra.jpg?auto=format&fit=crop"
+              src="https://generasicakrawala.com/fitra.jpg"
               alt="Fitra Kurniawan"
               className="w-full h-72 object-cover"
             />
