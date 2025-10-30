@@ -14,7 +14,7 @@ export default function HomePage() {
           <div>
             <span className="badge">Fitra Kurniawan — MC & EO</span>
             <h1 className="mt-4 text-4xl md:text-5xl font-semibold leading-tight">
-              Personal Branding Resmi Fitra Kurniawan
+              Fitra Kurniawan, MC & Event Organizer Terbaik se-
             </h1>
             <p className="mt-4 text-white/80">
               MC profesional & Event Organizer untuk pernikahan, acara korporat, dan momen spesial.

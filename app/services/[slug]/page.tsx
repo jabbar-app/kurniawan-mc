@@ -13,7 +13,7 @@ export default function ServiceDetailPage({ params }: Params) {
     return (
       <main className="section">
         <p>Service not found.</p>
-        <Link href="/services" className="text-[var(--gold)]">← Back to services</Link>
+        <Link href="/services" className="text-[var(--gold)]">← Kembali ke services</Link>
       </main>
     );
   }
@@ -33,7 +33,7 @@ export default function ServiceDetailPage({ params }: Params) {
         {service.packages.map((p: any) => (
           <div key={p.name} className="card p-6">
             <h3 className="text-xl font-medium">{p.name}</h3>
-            <p className="text-white/70 mt-1">Starting from ${p.price}</p>
+            <p className="text-white/70 mt-1">Mulai dari Rp{p.price}rb</p>
             <ul className="mt-3 space-y-1 text-white/80 list-disc list-inside">
               {p.features.map((f: string) => <li key={f}>{f}</li>)}
             </ul>
@@ -43,7 +43,7 @@ export default function ServiceDetailPage({ params }: Params) {
       </div>
 
       <div className="mt-8">
-        <Link href="/services" className="text-[var(--gold)]">← Back to services</Link>
+        <Link href="/services" className="text-[var(--gold)]">← Kembali ke services</Link>
       </div>
     </main>
   );
