@@ -1,0 +1,40 @@
+[
+  {
+    "id": 1,
+    "slug": "wedding-mc",
+    "name": "Wedding MC",
+    "summary": "Elegant hosting for your wedding ceremony and reception.",
+    "description": "Professional bilingual MC ensuring smooth flow, heartfelt moments, and on-time execution.",
+    "packages": [
+      { "name": "Silver", "price": 200, "features": ["Ceremony MC", "Reception MC"] },
+      { "name": "Gold", "price": 350, "features": ["Ceremony + Reception", "Run-down Assistance", "Vendor Coordination"] },
+      { "name": "Platinum", "price": 500, "features": ["Full Day", "Script Support", "Team Assistant"] }
+    ]
+  },
+  {
+    "id": 2,
+    "slug": "wedding-organizer",
+    "name": "Wedding Organizer",
+    "summary": "End-to-end planning and execution.",
+    "description": "From concept to celebration, we make your wedding stress-free and memorable.",
+    "packages": [
+      { "name": "Day Of", "price": 600, "features": ["Run-down", "Vendor Liaison", "On-site Team"] },
+      { "name": "Half Planning", "price": 1200, "features": ["Concept Guidance", "Vendor Shortlist", "Rehearsal"] },
+      { "name": "Full Planning", "price": 2200, "features": ["Concept & Budgeting", "Vendor Management", "Full Execution"] }
+    ]
+  },
+  {
+    "id": 3,
+    "slug": "corporate-events",
+    "name": "Corporate Events",
+    "summary": "Conferences, launches, and award nights.",
+    "description": "Professional stage management, engaging hosting, and flawless logistics for your brand.",
+    "packages": [
+      { "name": "Standard", "price": 400, "features": ["MC", "Basic Run-down"] },
+      { "name": "Premium", "price": 800, "features": ["MC + Coordination", "Presentation Support"] },
+      { "name": "Executive", "price": 1400, "features": ["Full Event Management", "Stage Director", "Backstage Team"] }
+    ]
+  }
+]
+
+

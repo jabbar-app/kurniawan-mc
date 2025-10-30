@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "title": "Elegant Wedding at The Garden",
+    "category": "Wedding",
+    "image": "https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?q=80&w=1200&auto=format&fit=crop",
+    "date": "2024-06-12"
+  },
+  {
+    "id": 2,
+    "title": "TechCorp Annual Conference",
+    "category": "Corporate",
+    "image": "https://images.unsplash.com/photo-1503428593586-e225b39bddfe?q=80&w=1200&auto=format&fit=crop",
+    "date": "2024-09-21"
+  },
+  {
+    "id": 3,
+    "title": "Brand Launch Night",
+    "category": "Corporate",
+    "image": "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?q=80&w=1200&auto=format&fit=crop",
+    "date": "2025-02-10"
+  },
+  {
+    "id": 4,
+    "title": "Intimate Seaside Ceremony",
+    "category": "Wedding",
+    "image": "https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=1200&auto=format&fit=crop",
+    "date": "2025-03-18"
+  }
+]
+
+
